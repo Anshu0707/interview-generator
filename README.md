@@ -6,7 +6,8 @@
 ---
 # Calibration of Difficulty Level
 
-- The experience level (Junior, Medium, Senior, etc.) provided by the user is used to adjust the complexity of the generated questions. The prompt to Cohere AI specifies the experience level to fine-tune the relevance and difficulty of the questions.
+- The experience level (Junior, Medium, Senior, etc.) provided by the user is used to adjust the complexity of the generated questions.
+- The prompt to Cohere AI specifies the experience level to fine-tune the relevance and difficulty of the questions.
 - Different experience levels lead to varying question difficulty; for example, questions for senior roles might involve more complex scenarios and deeper technical insights.
 ---
 # Technical Decisions and Trade-offs
