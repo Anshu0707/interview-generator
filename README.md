@@ -1,7 +1,7 @@
 # Approach to Question Generation
 
 - Cohere AI is used to generate technical interview questions by making API calls with a dynamic prompt based on the job title and experience level. The prompt requests a list of relevant interview questions with evaluation criteria for each.
-- I am using "command" model of cohere ai which takes up to 10-20 seconds as it is more thoughtful.
+- I am using the "command" model of cohere ai, which takes up to 10-20 seconds, as it is more thoughtful.
 - The API response is parsed to extract the questions and evaluation criteria, which are then displayed on the frontend.
 ---
 # Calibration of Difficulty Level
@@ -21,10 +21,10 @@
 
 - For frontend --> React app
 - For backend --> Express server
-- Setup environment variables in ".env" file
+- Set up environment variables in the ".env" file
 - Install dependencies:
   - dotenv
-  - expresss
+  - express
   - cors
   - cohere-ai
 
