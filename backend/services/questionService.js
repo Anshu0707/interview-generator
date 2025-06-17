@@ -1,4 +1,4 @@
-const { generateQuestions } = require("../utils/cohereAiClient"); // Import OpenAI client
+const { generateQuestions } = require("../utils/cohereAIClient"); // Import OpenAI client
 
 const MAX_REQUESTS_PER_WINDOW = 10; // Maximum requests allowed
 const TIME_WINDOW_MS = 60000; // Time window in milliseconds (e.g., 1 minute)
