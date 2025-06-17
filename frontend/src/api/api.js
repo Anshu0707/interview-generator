@@ -1,6 +1,7 @@
 // Update the API endpoint to your backend's URL
-const API_URL = "http://localhost:5000/api/generate-questions";
+require("dotenv").config();
 
+const API_URL = require("dotenv").config();
 export const generateInterviewQuestions = async (jobTitle, experienceLevel) => {
   try {
     const response = await fetch(API_URL, {

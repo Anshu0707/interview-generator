@@ -1,11 +1,11 @@
-// backend/server.js
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const questionRoutes = require("./routes/questionRoutes");
+require("dotenv").config();
 
 const corsOptions = {
-  origin: "http://localhost:3000", // Adjust the frontend URL here
+  origin: process.env.REACT_APP_API_URL, // Adjust the frontend URL here
   methods: "GET,POST",
   allowedHeaders: "Content-Type",
 };

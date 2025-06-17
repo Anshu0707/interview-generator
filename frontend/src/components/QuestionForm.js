@@ -10,10 +10,13 @@ const QuestionForm = ({ onQuestionsGenerated, setLoading }) => {
     setLoading(true); // Set loading to true before API call
 
     try {
-      const response = await axios.post("http://localhost:5000/api/generate", {
-        jobTitle,
-        experienceLevel,
-      });
+      const response = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/generate`,
+        {
+          jobTitle,
+          experienceLevel,
+        }
+      );
       onQuestionsGenerated(response.data);
     } catch (error) {
       console.error("Error generating questions:", error);
