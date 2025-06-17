@@ -5,7 +5,7 @@ const questionRoutes = require("./routes/questionRoutes");
 require("dotenv").config();
 
 const corsOptions = {
-  origin: process.env.REACT_APP_API_URL, // Adjust the frontend URL here
+  origin: process.env.CLIENT_URL, // Adjust the frontend URL here
   methods: "GET,POST",
   allowedHeaders: "Content-Type",
 };
