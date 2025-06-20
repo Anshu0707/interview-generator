@@ -1,6 +1,6 @@
 /node_modules
 /frontend/.env
 /backend/.env
-/frontend/App/test.js
-/frontend/reportWebVitals.js
-/frontend/setupTests.js
+/frontend/src/App.test.js
+/frontend/src/reportWebVitals.js
+/frontend/src/setupTests.js
