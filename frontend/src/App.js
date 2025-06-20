@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import QuestionForm from "./components/QuestionForm";
 import QuestionList from "./components/QuestionList";
-import "./styles.css";
+import loadingAnimation from "./assets/loading-spinner.json";
+import { Player } from "@lottiefiles/react-lottie-player";
+import ParticlesBackground from "./components/ParticlesBackground";
+import "./App.css";
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
@@ -13,18 +16,30 @@ const App = () => {
 
   return (
     <div className="app-container">
+      {/* Interactive particle background */}
+      <ParticlesBackground />
+
       <h1>Technical Interview Question Generator</h1>
 
-      {/* Using conditional rendering to render spinner */}
-      {isLoading && <div className="spinner"></div>}
+      {/* Loading spinner */}
+      {isLoading && (
+        <div className="spinner-container">
+          <Player
+            autoplay
+            loop
+            src={loadingAnimation}
+            style={{ height: "120px", width: "120px" }}
+          />
+        </div>
+      )}
 
-      {/* Pass setIsLoading to QuestionForm */}
+      {/* Form to generate questions */}
       <QuestionForm
         onQuestionsGenerated={handleQuestionsGenerated}
         setLoading={setIsLoading}
       />
 
-      {/* Using conditional rendering to render Questions*/}
+      {/* Render questions if available */}
       {questions.length > 0 && (
         <div className="question-container">
           <QuestionList questions={questions} />
