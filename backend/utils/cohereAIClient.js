@@ -1,7 +1,7 @@
-const { CohereClient } = require("cohere-ai");
 require("dotenv").config();
+const { CohereClient } = require("cohere-ai");
 
-const cohereApiKey = process.env.COHERE_API_KEY; //API
+const cohereApiKey = process.env.COHERE_API_KEY;
 
 if (!cohereApiKey) {
   throw new Error("Cohere API key is missing. Please check your .env file.");

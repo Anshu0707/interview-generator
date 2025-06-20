@@ -11,7 +11,7 @@ const QuestionForm = ({ onQuestionsGenerated, setLoading }) => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/generate`,
+        `${process.env.REACT_APP_API_URL}/api/generate`,
         {
           jobTitle,
           experienceLevel,
